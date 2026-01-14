@@ -1,7 +1,7 @@
 blueprint:
   name: Candeo Test
   description: >
-    **Smart Bulb control for C-ZB-RD1P (Remote Mode or Dual Purpose Mode) using zigbee2mqtt**
+    **Smart Bulb control for C-ZB-RD1P (Remote Mode or Dual Purpose Mode) using zigbee2mqtt v1.1**
 
     Use a Candeo RD1P in either REM mode or DPM mode to control your smart bulbs - on/off state, brightness, white temp, or colour.
 
