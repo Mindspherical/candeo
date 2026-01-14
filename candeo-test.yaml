@@ -150,7 +150,7 @@ blueprint:
             boolean:
 
 # Patched: use restart to avoid "single mode" sticky feel under rapid rotate events
-mode: restart
+mode: single
 max_exceeded: silent
 
 variables:
@@ -300,10 +300,11 @@ action:
                   - action: light.turn_on
                     target: "{{ target_lights }}"
                     data:
+                      transition: 0
                       brightness_step_pct: "{{ brightness_step }}"
                   # Patched: throttle to reduce zigbee "busy" spam
                   - delay:
-                      milliseconds: 120
+                      milliseconds: 200
 
               # White Temperature Mode
               - conditions:
@@ -377,10 +378,11 @@ action:
                   - action: light.turn_on
                     target: "{{ target_lights }}"
                     data:
+                      transition: 0
                       brightness_step_pct: "{{ -brightness_step }}"
                   # Patched: throttle to reduce zigbee "busy" spam
                   - delay:
-                      milliseconds: 120
+                      milliseconds: 200
 
               # White Temperature Mode
               - conditions:
